@@ -67,13 +67,12 @@
 
   &__title {
     font-size: 36px;
-    font-weight: 500;
-    line-height: 50px;
+    font-weight: 400;
   }
 
   &__subtitle {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 25px;
   }
 
@@ -119,7 +118,7 @@
 
   &__profile-name {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     max-width: min-content;
 
     @media (max-width: 720px) {

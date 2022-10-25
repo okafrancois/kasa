@@ -17,10 +17,10 @@ const Home = ({lodges}) => {
 
     return (
         <Layout containerClass={"container home-view"}>
-            <div className="cover">
+            <div className="home-view__banner">
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <div className="lodges-list">
+            <div className="home-view__lodges-list">
                 {loading && <p>Chargement...</p>}
                 {!loading && lodgesList.map(lodge => (
                     <LodgeCard key={lodge.id} data={lodge}/>

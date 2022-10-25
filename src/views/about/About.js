@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from "../../components/layout/Layout.js";
 import './about.scss';
 import cover from "../../assets/img/background-two-kasa.jpg";
-import Accordion from "../../components/accordion/Accordion.js";
+import Collapse from "../../components/collapse/Collapse.js";
 
 const About = () => {
     const content = [
@@ -30,7 +30,7 @@ const About = () => {
             </div>
             <div className="about-view__content">
                 {
-                    content.map((item, index) => <Accordion key={`item-${index}`} title={item.title} content={item.description}/>)
+                    content.map((item, index) => <Collapse key={`item-${index}`} title={item.title} content={item.description}/>)
                 }
             </div>
         </Layout>

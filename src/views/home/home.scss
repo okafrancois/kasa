@@ -1,5 +1,5 @@
 .home-view {
-  .cover {
+  &__banner {
     background: url('../../assets/img/backgound-home-kasa.jpg') no-repeat center center;
     background-size: cover;
     max-height: 225px;
@@ -14,26 +14,26 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
-  }
 
-  .cover h1 {
-    padding: 1rem;
-    color: #fff;
-    font-size: 48px;
-    font-weight: 500;
-    height: 100%;
-    background: #0000003b;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    h1 {
+      padding: 1rem;
+      color: #fff;
+      font-size: 48px;
+      font-weight: 500;
+      height: 100%;
+      background: #0000003b;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
 
-    @media (max-width: 720px) {
-      font-size: 24px;
+      @media (max-width: 720px) {
+        font-size: 24px;
+      }
     }
   }
 
-  .lodges-list {
+  &__lodges-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 60px;

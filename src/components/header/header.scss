@@ -14,12 +14,13 @@
 
   nav {
     display: flex;
-    gap: 1rem;
+    gap: 60px;
     font-size: 24px;
 
     @media (max-width: 720px) {
       font-size: 12px;
       text-transform: uppercase;
+      gap: 10px;
     }
 
     .active {

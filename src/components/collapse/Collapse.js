@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './accordion.scss';
+import './collapse.scss';
 
-const Accordion = ({title, content}) => {
+const Collapse = ({title, content}) => {
     const [open, setOpen] = useState(false);
 
     const handleToggle = () => {
@@ -9,8 +9,8 @@ const Accordion = ({title, content}) => {
     }
 
     return (
-        <div className={`accordion ${open ? '--is-open' : ''}`}>
-            <button className="accordion__title" onClick={handleToggle}>
+        <div className={`collapse ${open ? '--is-open' : ''}`}>
+            <button className="collapse__title" onClick={handleToggle}>
                 <p>{title}</p>
                 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_67962_101)">
@@ -23,7 +23,7 @@ const Accordion = ({title, content}) => {
                     </defs>
                 </svg>
             </button>
-            <div className="accordion__content">
+            <div className="collapse__content">
                 {
                     typeof content === 'string' ? <p>{content}</p> : <ul>
                         {content.map((item, index) => (
@@ -36,4 +36,4 @@ const Accordion = ({title, content}) => {
     );
 };
 
-export default Accordion;
+export default Collapse;
