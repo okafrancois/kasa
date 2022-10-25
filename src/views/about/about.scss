@@ -1,0 +1,34 @@
+.about-view {
+  &__cover {
+    max-height: 225px;
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    aspect-ratio: 5.5/1;
+
+    @media (max-width: 720px) {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      aspect-ratio: 1.5/1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    @media (max-width: 720px) {
+      gap: 20px;
+    }
+  }
+}
