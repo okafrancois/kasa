@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './lodging.scss'
 import {useNavigate, useParams} from "react-router-dom";
-import {getLodges} from "../../lib/functions.js";
+import {getLodges, getOneLodge} from "../../lib/functions.js";
 import Slideshow from "../../components/slide-show/Slideshow.js";
 import RatingStarts from "../../components/RatingStarts/RatingStarts.js";
 import Layout from "../../components/layout/Layout.js";
@@ -14,17 +14,16 @@ const Lodging = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getLodges()
-            .then((lodges) => {
-                lodges.forEach((lodge) => {
-                    if (lodge.id === id) {
-                        setLodgeData(lodge);
-                        setLoading(false);
-                    }
-                })
-            })
-
-    }, [id])
+        getLodges().then((lodges) => {
+            const lodge = lodges.find((lodge) => lodge.id === id);
+            if (lodge) {
+                setLodgeData(lodge);
+                setLoading(false);
+            } else {
+                navigate('/404');
+            }
+        })
+    }, [id, navigate])
 
     return (
         <Layout containerClass={"container lodging-view"}>

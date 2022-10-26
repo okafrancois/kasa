@@ -18,11 +18,12 @@
     @media (max-width: 720px) {
       font-size: 13px;
     }
+  }
 
-    svg {
-        width: 25px;
-        height: 25px;
-    }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease-in-out;
   }
 
   &__content {
@@ -44,6 +45,10 @@
   .collapse {
     &__content {
       display: block;
+    }
+
+    &__icon {
+        transform: rotate(-180deg);
     }
   }
 }

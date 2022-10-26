@@ -6,7 +6,7 @@
 
   &__container {
     display: flex;
-    overflow-y: hidden;
+    overflow: hidden;
     height: 100%;
     transition: transform 0.5s ease-in-out;
 
