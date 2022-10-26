@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import Home from "../views/home/Home.js";
-import Lodging from "../views/lodging/Lodging.js";
+import Lodge from "../views/lodge/Lodge.js";
 import About from "../views/about/About.js";
 import NotFounded from "../views/not-founded/NotFounded.js";
 
@@ -15,7 +15,7 @@ const routes = createBrowserRouter([
     },
     {
         path: '/lodges/:id',
-        element: <Lodging/>,
+        element: <Lodge/>,
     },
     {
         path: '*',

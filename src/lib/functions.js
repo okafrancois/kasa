@@ -7,6 +7,11 @@ const getLodges = async () => {
     }
 }
 
+const setPageTitle = (value) => {
+    document.title = `Kasa - ${value}`
+}
+
 export {
-    getLodges
+    getLodges,
+    setPageTitle
 }

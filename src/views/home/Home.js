@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './home.scss';
-import {getLodges} from "../../lib/functions.js";
+import {getLodges, setPageTitle} from "../../lib/functions.js";
 import LodgeCard from "../../components/logde-card/LodgeCard.js";
 import Layout from "../../components/layout/Layout.js";
 import Loader from "../../components/loader/Loader.js";
@@ -10,6 +10,7 @@ const Home = ({lodges}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setPageTitle('Accueil');
         getLodges().then((lodges) => {
             setLodgesList(lodges);
             setLoading(false);

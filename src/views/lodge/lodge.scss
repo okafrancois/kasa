@@ -1,6 +1,5 @@
 @use "../../lib/config" as *;
-
-.lodge-item {
+.lodge-view {
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
