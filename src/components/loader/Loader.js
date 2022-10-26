@@ -1,9 +1,13 @@
 import React from 'react';
+import './loader.scss';
 
 const Loader = () => {
     return (
-        <div>
-            <h1>Loading...</h1>
+        <div className={"loader"}>
+            <div className="loader__icon">
+                <div></div>
+                <div></div>
+            </div>
         </div>
     );
 };

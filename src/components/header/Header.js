@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className={"header container"}>
             <Link to={"/"} className={"header__logo"}>
-                <img src={logo} alt="Kasa"/>
+                <img loading={"lazy"} src={logo} alt="Kasa"/>
             </Link>
             <nav>
                 <NavLink to={"/"} end>Accueil</NavLink>

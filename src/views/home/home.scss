@@ -1,24 +1,27 @@
+@use "../../lib/config" as *;
+
+
 .home-view {
   &__banner {
     background: url('../../assets/img/backgound-home-kasa.jpg') no-repeat center center;
     background-size: cover;
     max-height: 225px;
     width: 100%;
-    border-radius: 25px;
+    border-radius: $radius-large;
     overflow: hidden;
     aspect-ratio: 5.5/1;
     margin-bottom: 40px;
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       aspect-ratio: 3/1;
-      border-radius: 10px;
+      border-radius: $radius-base;
       margin-bottom: 20px;
     }
 
     h1 {
       padding: 1rem;
       color: #fff;
-      font-size: 48px;
+      font-size: $font-xlarge;
       font-weight: 500;
       height: 100%;
       background: #0000003b;
@@ -26,10 +29,6 @@
       justify-content: center;
       align-items: center;
       display: flex;
-
-      @media (max-width: 720px) {
-        font-size: 24px;
-      }
     }
   }
 
@@ -37,11 +36,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 60px;
-    background: #F6F6F6;
+    background: $near-white;
     padding: 40px;
-    border-radius: 25px;
+    border-radius: $radius-large;
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px 20px;
       padding: 0;

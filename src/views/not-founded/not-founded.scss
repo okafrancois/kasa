@@ -1,3 +1,5 @@
+@use "../../lib/config" as *;
+
 .not-founded-view {
   display: flex;
   flex-direction: column;
@@ -8,35 +10,26 @@
   gap: 50px;
 
   h1 {
-    font-size: 290px;
+    font-size: to-rem(290);
     font-weight: 700;
     line-height: 1;
   }
 
   p {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: $font-large;
   }
 
   .home-link {
-    font-size: 18px;
+    font-size: $font-base;
     text-decoration: underline;
     margin-top: 10%;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: $mobile-breakpoint) {
     gap: 10px;
 
-    h1 {
-      font-size: 100px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
     .home-link {
-      font-size: 14px;
+      font-size: $font-medium;
       margin-top: 40%;
     }
   }

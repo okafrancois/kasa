@@ -1,16 +1,18 @@
+@use "../../lib/config" as *;
+
 .rating-starts {
   display: flex;
 
   &__item {
-    color: #ccc;
+    color: $gray;
     width: 36px;
     aspect-ratio: 1/1;
 
     &.--active {
-      color: #FF6060;
+      color: $primary-color;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       width: 20px;
     }
   }

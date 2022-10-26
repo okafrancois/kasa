@@ -1,22 +1,24 @@
+@use "../../lib/config" as *;
+
 .collapse {
   display: flex;
   flex-direction: column;
   height: 100%;
 
   &__title {
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
     padding: 0 15px;
-    background: #FF6060;
+    background: $primary-color;
     width: 100%;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 18px;
+    border-radius: $radius-base;
+    font-size: $font-base;
 
-    @media (max-width: 720px) {
-      font-size: 13px;
+    @media (max-width:$mobile-breakpoint) {
+      font-size: $font-medium;
     }
   }
 
@@ -30,13 +32,13 @@
     flex-grow: 1;
     display: none;
     padding: 15px;
-    background: #F6F6F6;
-    border-radius: 10px;
+    background: $near-white;
+    border-radius: $radius-small;
     font-weight: 300;
-    font-size: 18px;
+    font-size: $font-base;
 
-    @media (max-width: 720px) {
-      font-size: 12px;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: $font-medium;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use '../../lib/config' as *;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,7 +9,7 @@
   padding-bottom: 0;
   overflow: hidden;
 
-  @media (min-width: 720px) {
+  @media (min-width: $mobile-breakpoint) {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -15,10 +17,9 @@
   nav {
     display: flex;
     gap: 60px;
-    font-size: 24px;
+    font-size: $font-medium;
 
-    @media (max-width: 720px) {
-      font-size: 12px;
+    @media (max-width: $mobile-breakpoint) {
       text-transform: uppercase;
       gap: 10px;
     }
@@ -38,7 +39,7 @@
       object-fit: contain;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       height: auto;
       width: 120px;
     }

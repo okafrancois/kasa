@@ -1,0 +1,29 @@
+// function to convert px to rem
+@function to-rem($value) {
+  $remValue: ($value / 18) + rem;
+  @return $remValue;
+}
+
+// colors
+$primary-color: #FF6060;
+$near-white: #F6F6F6;
+$white: #fff;
+$black: #000;
+$gray: #ccc;
+
+
+// rounding
+$radius-small: 5px;
+$radius-base: 10px;
+$radius-large: 25px;
+
+// font sizes
+$base-size: 18;
+$font-small: to-rem(14);
+$font-base: to-rem($base-size);
+$font-medium: to-rem(24);
+$font-large: to-rem(36);
+$font-xlarge: to-rem(48);
+
+// breakpoints
+$mobile-breakpoint: 768px;

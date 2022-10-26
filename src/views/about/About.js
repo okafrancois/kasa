@@ -26,7 +26,7 @@ const About = () => {
     return (
         <Layout containerClass={"container about-view"}>
             <div className="about-view__cover">
-                <img src={cover} alt=""/>
+                <img loading={"lazy"} src={cover} alt=""/>
             </div>
             <div className="about-view__content">
                 {

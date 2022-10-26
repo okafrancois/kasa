@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './lodging.scss'
 import {useNavigate, useParams} from "react-router-dom";
-import {getLodges, getOneLodge} from "../../lib/functions.js";
+import {getLodges} from "../../lib/functions.js";
 import Slideshow from "../../components/slide-show/Slideshow.js";
 import RatingStarts from "../../components/RatingStarts/RatingStarts.js";
 import Layout from "../../components/layout/Layout.js";
 import Collapse from "../../components/collapse/Collapse.js";
+import Loader from "../../components/loader/Loader.js";
 
 const Lodging = () => {
     const {id} = useParams();
@@ -27,7 +28,7 @@ const Lodging = () => {
 
     return (
         <Layout containerClass={"container lodging-view"}>
-            {loading && <p>Chargement...</p>}
+            {loading && <Loader/>}
             {!loading && lodgeData && (
                 <div className={"lodge-item"}>
                     <div className="lodge-item__cover">
@@ -47,7 +48,7 @@ const Lodging = () => {
                             <div className="lodge-item__profile">
                                 <p className={"lodge-item__profile-name"}>{lodgeData.host.name}</p>
                                 <span className="lodge-item__avatar">
-                                    <img src={lodgeData.host.picture} alt={lodgeData.host.name}/>
+                                    <img loading={"lazy"} src={lodgeData.host.picture} alt={lodgeData.host.name}/>
                                 </span>
                             </div>
                             <div className="lodge-item__note">

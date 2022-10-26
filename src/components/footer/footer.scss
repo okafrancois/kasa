@@ -1,3 +1,5 @@
+@use "../../lib/config" as *;
+
 .footer {
   max-width: 100%;
   display: flex;
@@ -5,17 +7,12 @@
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #000;
+  background-color: $black;
   height: 210px;
-  color: #fff;
-  font-size: 24px;
+  color: $white;
+  font-size: $font-medium;
   font-weight: 500;
   margin-top: 20px;
-
-  @media (max-width: 720px) {
-    font-size: 12px;
-  }
-
 
   .page-logo {
     height: auto;

@@ -1,15 +1,17 @@
+@use "../../lib/config" as *;
+
 .about-view {
   &__cover {
     max-height: 225px;
     margin-bottom: 30px;
     width: 100%;
-    border-radius: 25px;
+    border-radius: $radius-large;
     overflow: hidden;
     aspect-ratio: 5.5/1;
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       margin-bottom: 20px;
-      border-radius: 10px;
+      border-radius: $radius-base;
       aspect-ratio: 1.5/1;
     }
 
@@ -27,7 +29,7 @@
     max-width: 1024px;
     margin: 0 auto;
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile-breakpoint) {
       gap: 20px;
     }
   }

@@ -3,9 +3,10 @@ import './home.scss';
 import {getLodges} from "../../lib/functions.js";
 import LodgeCard from "../../components/logde-card/LodgeCard.js";
 import Layout from "../../components/layout/Layout.js";
+import Loader from "../../components/loader/Loader.js";
 
 const Home = ({lodges}) => {
-    const [lodgesList, setLodgesList] = useState([]);
+    const [lodgesList, setLodgesList] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -20,13 +21,15 @@ const Home = ({lodges}) => {
             <div className="home-view__banner">
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <div className="home-view__lodges-list">
-                {loading && <p>Chargement...</p>}
-                {!loading && lodgesList.map(lodge => (
-                    <LodgeCard key={lodge.id} data={lodge}/>
-                ))
-                }
-            </div>
+            {loading && <Loader/>}
+            {!loading && lodgesList && (
+                <div className="home-view__lodges-list">
+                    {lodgesList.map(lodge => (
+                        <LodgeCard key={lodge.id} data={lodge}/>
+                    ))
+                    }
+                </div>
+            )}
         </Layout>
     );
 };

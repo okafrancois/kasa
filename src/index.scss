@@ -1,15 +1,19 @@
+@use "./lib/config" as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #FF6060;
+  color: $primary-color;
   overflow-x: hidden;
 }
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 18px;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 9px;
+  }
 }
 
 *, *:before, *:after {
